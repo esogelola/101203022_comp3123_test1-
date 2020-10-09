@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <script>
+      const resolvedPromise = () => {
+          return new Promise((resolve) =>{
+            setTimeout(() =>{
+                let success = {'message': 'delayed success!'}
+                resolve(success)
+  
+            }, 500)
+          })
+         
+      }
+      const rejectedPromise = () => {
+        return new Promise((reject) =>{
+          setTimeout(() =>{
+            let rejected = {'message': 'delayed exception!'}
+                
+              reject(rejected)
+                
+          }, 500)
+        })
+       
+    }
+
+    resolvedPromise().then((result)=>console.log(result))
+    rejectedPromise().then((result)=>console.log(result))
+        </script>
+</body>
+</html>
