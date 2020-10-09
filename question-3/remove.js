@@ -8,7 +8,7 @@ module.exports.clearLog = () => {
         console.log("delete files..." + data[i])
        fs.unlink("logs/" + data[i],  (err,data) =>{if(err) console.log('erorr', err)})
     }
-    fs.rmdir("logs/",(err,data) =>{if(err) console.log('erorr', err)})
+    fs.rmdirSync("logs/")
 
     })
 }

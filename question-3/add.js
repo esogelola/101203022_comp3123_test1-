@@ -1,13 +1,12 @@
 const fs = require("fs");
-const path = require('path');
-const process = require('process');
+const path = require("path")
 
 module.exports.addLog = () => {
     var dir = "./Logs/"
-
+  
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir);
-      
+        
     }
     for(let i = 0; i < 10;i++){
         filename = "log" + i;
